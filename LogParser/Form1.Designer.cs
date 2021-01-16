@@ -31,11 +31,12 @@ namespace LogParser
         {
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.Label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -46,7 +47,7 @@ namespace LogParser
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 759);
+            this.splitter1.Size = new System.Drawing.Size(3, 1011);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
@@ -65,14 +66,28 @@ namespace LogParser
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.textBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(1694, 759);
+            this.splitContainer1.Size = new System.Drawing.Size(1694, 1011);
             this.splitContainer1.SplitterDistance = 707;
             this.splitContainer1.TabIndex = 1;
             // 
+            // Label
+            // 
+            this.Label.AutoSize = true;
+            this.Label.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label.ForeColor = System.Drawing.Color.Green;
+            this.Label.Location = new System.Drawing.Point(9, 9);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(288, 36);
+            this.Label.TabIndex = 2;
+            this.Label.Text = "Paste your log here:";
+            this.Label.Click += new System.EventHandler(this.label1_Click);
+            // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(47, 893);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(542, 52);
@@ -92,29 +107,6 @@ namespace LogParser
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(3, 48);
-            this.textBox2.MaxLength = 0;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(1048, 824);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // Label
-            // 
-            this.Label.AutoSize = true;
-            this.Label.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label.ForeColor = System.Drawing.Color.Green;
-            this.Label.Location = new System.Drawing.Point(9, 9);
-            this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(288, 36);
-            this.Label.TabIndex = 2;
-            this.Label.Text = "Paste your log here:";
-            this.Label.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -126,11 +118,33 @@ namespace LogParser
             this.label1.TabIndex = 3;
             this.label1.Text = "Errors:";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(3, 48);
+            this.textBox2.MaxLength = 0;
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox2.Size = new System.Drawing.Size(1048, 824);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(173, 893);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(542, 52);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Copy!";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1697, 759);
+            this.ClientSize = new System.Drawing.Size(1697, 1011);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.splitter1);
             this.Name = "Form1";
@@ -156,6 +170,7 @@ namespace LogParser
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

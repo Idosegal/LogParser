@@ -47,7 +47,7 @@ namespace LogParser
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            //this.textBox2.Text = this._res;
+            textBox2.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -73,6 +73,14 @@ namespace LogParser
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!textBox2.Text.Equals(""))
+            {
+                Clipboard.SetText(textBox2.Text);
+            }
         }
     }
 }
