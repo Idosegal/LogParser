@@ -49,7 +49,7 @@ namespace LogParser
 
             while ((line = sr.ReadLine()) != null)
             {
-                if(line.Contains("ERROR") || line.Contains("Exception") || line.Contains("Failed") || line.Contains("WARN"))
+                if(line.Contains("ERROR") || line.Contains("Exception") || line.Contains("Failed"))
                 {
                     sb.Append(line);
                     sb.Append(System.Environment.NewLine);
